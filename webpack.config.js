@@ -1,5 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
+var HtmlwebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry:  path.resolve(__dirname, "app"),
@@ -28,5 +29,8 @@ module.exports = {
         NODE_ENV: JSON.stringify("production"),
       },
     }),
+    new HtmlwebpackPlugin({
+      title: 'My app'
+    })
   ],
 };

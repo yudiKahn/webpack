@@ -1,3 +1,10 @@
-var HelloWorld = require('./hello');
+import ReactDOM from 'react-dom';
+import React from 'react';
+import App from './App';
 
-document.body.appendChild(HelloWorld());
+let appDiv = document.createElement('div');
+appDiv.setAttribute('id', 'app');
+document.body.append(appDiv);
+
+
+ReactDOM.render(<App/>, appDiv);
